@@ -7,5 +7,4 @@ return [
         'diamond' => 4000000,
         'admin' => 5000000
     ],
-    'secret_key' => env('SECRET_KEY')
 ];

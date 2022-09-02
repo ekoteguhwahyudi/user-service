@@ -18,7 +18,7 @@ return new class extends Migration
             $table->collation = 'utf8mb4_unicode_ci';
 
             $table->uuid('id')->primary();
-            $table->string('serial', 7)->unique()->index();
+            $table->string('user_serial', 7)->index();
             $table->string('category', 100)->default('whatsapp')->index()->comment("whatsapp,telegram,sms,line, dll");
             $table->string('description')->nullable()->index();
             $table->string('status')->default(1)->index();

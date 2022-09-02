@@ -22,8 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(
     ['prefix' => 'user'],
     function () {
-        Route::post('', [UserController::class, 'userDetail'])->name('user');
+        Route::post('/detail', [UserController::class, 'userDetail'])->name('user');
         Route::post('/saldo', [UserController::class, 'updateSaldo'])->name('user.saldo');
         Route::post('/level', [UserController::class, 'updateLevel'])->name('user.level');
+        Route::post('/check', [UserController::class, 'checkUser'])->name('user.check');
     }
 );
